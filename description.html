@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='inp1.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+            height: 100vh;
+        }
+
+        h2, h3 {
+            color: #ffcc00;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        ul, ol {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+
+        li {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        /* Emojis for list items */
+        li::before {
+            font-size: 1.5rem;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 14px 24px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+            transform: translateY(-3px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Different Colors for Buttons */
+        .return-btn {
+            background-color: #4CAF50;
+        }
+
+        .return-btn:hover {
+            background-color: #3d8b40;
+        }
+
+        .emoji {
+            font-size: 24px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h2, h3 {
+                font-size: 2rem;
+            }
+
+            p, li {
+                font-size: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>📖 Project Description 📖</h2>
+
+<h3>🌐 Introduction</h3>
+<p>
+    The <b>Domain Name System (DNS)</b> is a fundamental part of the internet, translating human-readable domain names into IP addresses. However, attackers often exploit DNS traffic to conduct cyber threats such as malware distribution, phishing attacks, and data exfiltration. DNS traffic analysis using Machine Learning (ML) enables the detection of anomalies, malicious activities, and potential threats by identifying unusual patterns in DNS queries and responses. Leveraging ML models in cybersecurity helps in proactive threat detection, enhancing the security of enterprise and personal networks.
+</p>
+
+<h3>🎯 Motto of the Concept</h3>
+<ul>
+    <li>🔎 **Detect Malicious Activities** – Identify suspicious DNS queries related to phishing, botnets, and malware.</li>
+    <li>🛡️ **Enhance Network Security** – Provide real-time threat monitoring and mitigation.</li>
+    <li>🚫 **Prevent Data Exfiltration** – Stop unauthorized data transfer via DNS tunneling.</li>
+    <li>📢 **Improve Incident Response** – Support security teams with actionable threat intelligence.</li>
+    <li>✅ **Reduce False Positives** – Utilize ML to refine anomaly detection with high accuracy.</li>
+</ul>
+
+<h3>🚀 Advantages of DNS Traffic Analysis Using ML</h3>
+<ol>
+    <li>⚡ **Real-Time Threat Detection** – ML models analyze DNS traffic instantly, detecting threats as they occur.</li>
+    <li>🤖 **Automated Anomaly Detection** – Reduces manual workload by automating suspicious pattern recognition.</li>
+    <li>📈 **Scalability** – ML-based systems can handle large-scale network traffic efficiently.</li>
+    <li>🔄 **Adaptive Security** – Learns from new threats, improving detection accuracy over time.</li>
+    <li>🔔 **Reduced Response Time** – Enhances cybersecurity response by providing early warnings about threats.</li>
+</ol>
+
+<h3>🌍 Applications</h3>
+<ul>
+    <li>🏢 **Enterprise Cybersecurity**</li>
+    <li>🌐 **Internet Service Providers (ISPs)**</li>
+    <li>☁️ **Cloud Security**</li>
+    <li>🛡️ **Government and Defense**</li>
+    <li>💰 **Financial Institutions**</li>
+</ul>
+
+<h3>🔍 Uses of DNS Traffic Analysis for Cyber Threats</h3>
+<ul>
+    <li>👾 **Identifying Botnets**</li>
+    <li>🎣 **Detecting Phishing Attempts**</li>
+    <li>🚫 **Preventing DNS Tunneling**</li>
+    <li>🧑‍💻 **Monitoring Insider Threats**</li>
+    <li>⚔️ **Enhancing Threat Intelligence**</li>
+</ul>
+
+<h3>💀 Types of DNS-Based Cyber Threats</h3>
+<ul>
+    <li>🌐 **DNS Tunneling**</li>
+    <li>🚀 **Fast-Flux Networks**</li>
+    <li>🪳 **DNS Spoofing**</li>
+    <li>🦠 **DGA-Based Malware**</li>
+    <li>💉 **Cache Poisoning**</li>
+</ul>
+
+<h3>🚨 Challenges in DNS Traffic Analysis</h3>
+<ul>
+    <li>🔎 **High False Positives**</li>
+    <li>🎭 **Evasion Techniques**</li>
+    <li>🛡️ **Data Privacy Issues**</li>
+    <li>⚡ **Scalability Concerns**</li>
+    <li>🧠 **Limited Ground Truth Data**</li>
+</ul>
+
+<h3>✅ Conclusion</h3>
+<p>
+    DNS traffic analysis using machine learning is a vital approach to detecting and preventing cyber threats. Despite challenges such as evasion techniques and high false positives, continuous advancements in ML and cybersecurity can enhance the effectiveness of DNS-based threat detection, contributing to a more secure digital landscape.
+</p>
+
+<!-- Return Home Button -->
+<button onclick="window.location.href='/'" class="btn return-btn">
+    🏠 Return Home
+</button>
+
+</body>
+</html>

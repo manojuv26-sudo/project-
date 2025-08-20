@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Traffic Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='inp1.gif') }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+            color: #ffcc00;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 16px 24px;
+            margin: 12px;
+            border: none;
+            cursor: pointer;
+            width: 280px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+            transform: translateY(-3px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Different Colors for Each Button */
+        .detect-btn { background-color: #ff5733; } /* Red */
+        .detect-btn:hover { background-color: #cc4125; }
+
+        .desc-btn { background-color: #4CAF50; } /* Green */
+        .desc-btn:hover { background-color: #3d8b40; }
+
+        .contact-btn { background-color: #ffc107; } /* Yellow */
+        .contact-btn:hover { background-color: #d39e00; }
+
+        .emoji {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<h1><b><i>DNS Traffic Analysis For Cyber Threats Using Machine Learning</i></b></h1>
+
+<!-- Detect Traffic Button -->
+<button class="btn detect-btn" onclick="window.location.href='/detect'">
+    🚀 Detect Traffic
+</button>
+
+<!-- Project Description Button -->
+<button class="btn desc-btn" onclick="window.location.href='/description'">
+    📖 Project Description
+</button>
+
+<!-- Contact Details Button -->
+<button class="btn contact-btn" onclick="window.location.href='/contact'">
+    📞 Contact Details
+</button>
+
+</body>
+</html>

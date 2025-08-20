@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='inp1.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "📞"; /* Emoji before title */
+        }
+
+        .contact-details {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 12px 0;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p::before {
+            font-size: 24px;
+        }
+
+        /* Emojis for contact details */
+        p:nth-child(1)::before { content: "👤"; }
+        p:nth-child(2)::before { content: "📧"; }
+        p:nth-child(3)::before { content: "📱"; }
+        p:nth-child(4)::before { content: "🌍"; }
+
+        /* Advanced Button Design */
+        .btn {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 14px 24px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+            transform: translateY(-3px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Different Colors for Buttons */
+        .return-btn {
+            background-color: #4CAF50;
+        }
+
+        .return-btn:hover {
+            background-color: #3d8b40;
+        }
+
+        .emoji {
+            font-size: 24px;
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .contact-details {
+                width: 90%;
+                padding: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Contact Details</h2>
+
+<div class="contact-details">
+    <p><b>Name:</b> N.Manoj Adithya Reddy</p>
+    <p><b>Email:</b> manojadithyareddynallimilli@gmail.com</p>
+    <p><b>Phone:</b> +91 9391929761</p>
+    <p><b>Location:</b> India</p>
+</div>
+
+<!-- Return Home Button -->
+<button onclick="window.location.href='/'" class="btn return-btn">
+    🏠 Return Home
+</button>
+
+</body>
+</html>

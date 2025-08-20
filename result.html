@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='inp3.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+            color: #ffcc00;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .btn {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 14px 24px;
+            margin: 12px;
+            border: none;
+            cursor: pointer;
+            width: 250px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+            transform: translateY(-3px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Different Colors for Buttons */
+        .try-again-btn { background-color: #ff5733; } /* Red */
+        .try-again-btn:hover { background-color: #cc4125; }
+
+        .return-btn { background-color: #4CAF50; } /* Green */
+        .return-btn:hover { background-color: #3d8b40; }
+
+        .emoji {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🚨 Prediction Result 🚨</h2>
+
+<p>{{ result }}</p>
+
+<!-- Try Again Button -->
+<button class="btn try-again-btn" onclick="window.location.href='/detect'">
+    🔄 Try Again
+</button>
+
+<!-- Return Home Button -->
+<button class="btn return-btn" onclick="window.location.href='/'">
+    🏠 Return Home
+</button>
+
+</body>
+</html>
